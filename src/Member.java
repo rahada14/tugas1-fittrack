@@ -14,3 +14,9 @@ public class Member {
     private static final String DEFAULT_TANGGAL_DAFTAR = "01-01-2026";
     private static final String DEFAULT_JENIS_PAKET = "Basic";
     private static final int MIN_PANJANG_TELEPON = 10;
+
+   // Atribut privat
+    private String nama;
+    private String noTelepon;
+    private String tanggalDaftar;
+    private String jenisPaket;
