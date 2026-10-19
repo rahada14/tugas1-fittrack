@@ -20,3 +20,14 @@ public class Member {
     private String noTelepon;
     private String tanggalDaftar;
     private String jenisPaket;
+
+    /**
+     * Constructor lengkap untuk membuat objek Member dengan empat parameter.
+     * Pengisian nilai dilakukan melalui setter untuk menerapkan validasi (DRY).
+     *
+     * @param nama nama lengkap member
+     * @param noTelepon nomor telepon member
+     * @param tanggalDaftar tanggal pendaftaran member
+     * @param jenisPaket jenis paket keanggotaan (Basic, Premium, VIP)
+     */
+    
