@@ -30,4 +30,12 @@ public class Member {
      * @param tanggalDaftar tanggal pendaftaran member
      * @param jenisPaket jenis paket keanggotaan (Basic, Premium, VIP)
      */
+
+    public Member(String nama, String noTelepon, String tanggalDaftar, String jenisPaket) {
+        // Tetapkan nilai awal default aman sebelum diproses oleh setter
+        this.nama = DEFAULT_NAMA;
+        this.noTelepon = DEFAULT_NO_TELEPON;
+        this.tanggalDaftar = DEFAULT_TANGGAL_DAFTAR;
+        this.jenisPaket = DEFAULT_JENIS_PAKET;
+
     
