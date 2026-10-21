@@ -38,4 +38,12 @@ public class Member {
         this.tanggalDaftar = DEFAULT_TANGGAL_DAFTAR;
         this.jenisPaket = DEFAULT_JENIS_PAKET;
 
+         // Memanggil setter untuk validasi (Prinsip DRY)
+        setNama(nama);
+        setNoTelepon(noTelepon);
+        setTanggalDaftar(tanggalDaftar);
+        setJenisPaket(jenisPaket);
+    }
+
+
     
