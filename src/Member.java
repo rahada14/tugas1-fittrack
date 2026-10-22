@@ -45,5 +45,17 @@ public class Member {
         setJenisPaket(jenisPaket);
     }
 
+    /**
+     * Constructor overloading tanpa jenis paket.
+     * Jenis paket otomatis diisi dengan nilai default "Basic" melalui constructor chaining.
+     *
+     * @param nama nama lengkap member
+     * @param noTelepon nomor telepon member
+     * @param tanggalDaftar tanggal pendaftaran member
+     */
+    public Member(String nama, String noTelepon, String tanggalDaftar) {
+        this(nama, noTelepon, tanggalDaftar, DEFAULT_JENIS_PAKET);
+    }
+
 
     
