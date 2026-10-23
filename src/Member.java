@@ -57,5 +57,28 @@ public class Member {
         this(nama, noTelepon, tanggalDaftar, DEFAULT_JENIS_PAKET);
     }
 
+    /**
+     * Mengembalikan nama member.
+     *
+     * @return nama member
+     */
+    public String getNama() {
+        return nama;
+    }
+
+    /**
+     * Mengubah nama member setelah melalui validasi.
+     * Nama tidak boleh kosong atau hanya berisi spasi.
+     *
+     * @param nama nama baru member
+     */
+    public void setNama(String nama) {
+        if (nama != null && !nama.trim().isEmpty()) {
+            this.nama = nama;
+        } else {
+            System.out.println("Error Validasi: Nama tidak boleh kosong atau hanya berisi spasi!");
+        }
+    }
+
 
     
