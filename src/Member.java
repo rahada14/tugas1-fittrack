@@ -80,5 +80,28 @@ public class Member {
         }
     }
 
+    /**
+     * Mengembalikan nomor telepon member.
+     *
+     * @return nomor telepon member
+     */
+    public String getNoTelepon() {
+        return noTelepon;
+    }
+
+    /**
+     * Mengubah nomor telepon member setelah melalui validasi.
+     * Wajib diawali angka 0 dan minimal 10 digit.
+     *
+     * @param noTelepon nomor telepon baru member
+     */
+    public void setNoTelepon(String noTelepon) {
+        if (noTelepon != null && noTelepon.startsWith("0") && noTelepon.length() >= MIN_PANJANG_TELEPON) {
+            this.noTelepon = noTelepon;
+        } else {
+            System.out.println("Error Validasi: Nomor telepon harus diawali angka 0 dan minimal 10 digit!");
+        }
+    }
+
 
     
