@@ -103,5 +103,28 @@ public class Member {
         }
     }
 
+    /**
+     * Mengembalikan tanggal daftar member.
+     *
+     * @return tanggal daftar member
+     */
+    public String getTanggalDaftar() {
+        return tanggalDaftar;
+    }
+
+    /**
+     * Mengubah tanggal pendaftaran member.
+     * Tanggal tidak boleh kosong.
+     *
+     * @param tanggalDaftar tanggal pendaftaran baru
+     */
+    public void setTanggalDaftar(String tanggalDaftar) {
+        if (tanggalDaftar != null && !tanggalDaftar.trim().isEmpty()) {
+            this.tanggalDaftar = tanggalDaftar;
+        } else {
+            System.out.println("Error Validasi: Tanggal daftar tidak boleh kosong!");
+        }
+    }
+
 
     
