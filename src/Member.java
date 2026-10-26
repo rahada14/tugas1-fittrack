@@ -126,5 +126,14 @@ public class Member {
         }
     }
 
+    /**
+     * Mengembalikan jenis paket keanggotaan.
+     *
+     * @return jenis paket
+     */
+    public String getJenisPaket() {
+        return jenisPaket;
+    }
+
 
     
