@@ -135,5 +135,19 @@ public class Member {
         return jenisPaket;
     }
 
+  /**
+     * Mengubah jenis paket keanggotaan.
+     * Hanya menerima nilai "Basic", "Premium", atau "VIP".
+     *
+     * @param jenisPaket jenis paket keanggotaan baru
+     */
+    public void setJenisPaket(String jenisPaket) {
+        if (jenisPaket != null && (jenisPaket.equals("Basic") || jenisPaket.equals("Premium") || jenisPaket.equals("VIP"))) {
+            this.jenisPaket = jenisPaket;
+        } else {
+            System.out.println("Error Validasi: Jenis paket hanya boleh 'Basic', 'Premium', atau 'VIP'!");
+        }
+    }
+
 
     
