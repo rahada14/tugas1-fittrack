@@ -149,5 +149,20 @@ public class Member {
         }
     }
 
+    /**
+     * Meng-override method toString untuk menampilkan informasi objek Member secara rapi.
+     *
+     * @return representasi String dari objek Member
+     */
+    @Override
+    public String toString() {
+        return "Member FitTrack [" +
+                "Nama: '" + nama + '\'' +
+                ", No. Telepon: '" + noTelepon + '\'' +
+                ", Tanggal Daftar: '" + tanggalDaftar + '\'' +
+                ", Jenis Paket: '" + jenisPaket + '\'' +
+                ']';
+    }
+}
 
     
