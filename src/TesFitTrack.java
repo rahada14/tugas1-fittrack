@@ -20,3 +20,9 @@ public class TesFitTrack {
 
         // Objek 1: Valid (Paket Premium)
         daftarMember[0] = new Member("Andi Wijaya", "081234567890", "10-10-2026", "Premium");
+
+        // Objek 2: Valid (Paket VIP)
+        daftarMember[1] = new Member("Budi Santoso", "085678901234", "12-10-2026", "VIP");
+
+        // Objek 3: Constructor tanpa paket (Otomatis menjadi Basic)
+        daftarMember[2] = new Member("Citra Dewi", "089012345678", "14-10-2026");
