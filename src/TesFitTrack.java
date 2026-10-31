@@ -26,3 +26,7 @@ public class TesFitTrack {
 
         // Objek 3: Constructor tanpa paket (Otomatis menjadi Basic)
         daftarMember[2] = new Member("Citra Dewi", "089012345678", "14-10-2026");
+
+        // Objek 4: Sengaja melanggar validasi pada constructor (No Telp salah format, paket salah)
+        System.out.print("[Uji Coba Input Salah] ");
+        daftarMember[3] = new Member("Eko Prasetyo", "12345", "15-10-2026", "SuperVIP");
