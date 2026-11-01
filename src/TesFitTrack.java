@@ -30,3 +30,10 @@ public class TesFitTrack {
         // Objek 4: Sengaja melanggar validasi pada constructor (No Telp salah format, paket salah)
         System.out.print("[Uji Coba Input Salah] ");
         daftarMember[3] = new Member("Eko Prasetyo", "12345", "15-10-2026", "SuperVIP");
+
+        System.out.println("\n=== 2. SKENARIO PERUBAHAN DATA LEWAT SETTER (VALIDASI) ===");
+        System.out.println("Nomor Telepon Awal Budi: " + daftarMember[1].getNoTelepon());
+        System.out.print("Mencoba mengubah nomor telepon Budi dengan nilai tidak valid ('123')... ");
+        
+        // Memanggil setter dengan nilai tidak valid
+        daftarMember[1].setNoTelepon("123");
