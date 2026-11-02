@@ -37,3 +37,13 @@ public class TesFitTrack {
         
         // Memanggil setter dengan nilai tidak valid
         daftarMember[1].setNoTelepon("123");
+
+        // Membuktikan nilai lama tetap bertahan
+        System.out.println("Nomor Telepon Budi Setelah Gagal Diubah: " + daftarMember[1].getNoTelepon());
+
+        System.out.println("\n=== 3. CETAK DAFTAR MEMBER DENGAN PERULANGAN FOR & TOSTRING() ===");
+        for (int i = 0; i < daftarMember.length; i++) {
+            System.out.println("Member ke-" + (i + 1) + ": " + daftarMember[i].toString());
+        }
+    }
+}
