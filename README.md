@@ -31,9 +31,10 @@ tugas1-fittrack/
 └── src/
     ├── Member.java
     └── TesFitTrack.java
+```
 
 ## Aturan Validasi
-```text
+
 | Atribut | Aturan Validasi | Dampak Jika Gagal Validasi |
 | :--- | :--- | :--- |
 | **Nama** | Tidak boleh `null`, kosong, atau hanya berisi spasi (`!nama.trim().isEmpty()`). | Menampilkan pesan error validasi; data tidak diperbarui. |
@@ -42,10 +43,13 @@ tugas1-fittrack/
 | **Jenis Paket** | Hanya menerima pilihan: **`Basic`**, **`Premium`**, atau **`VIP`** (*case-sensitive*). | Menampilkan pesan error validasi; paket diisi/dipertahankan sesuai status sebelumnya. |
 
 ## Cara Menjalankan Program:
+## Prasyarat
+* **Java Development Kit (JDK)**: Versi 21
+* **IDE (Disarankan)**: Visual Studio Code / IntelliJ IDEA / NetBeans
 
 ### Melalui Command Line (Terminal)
-Clone Repository ini:
 
+1. Clone Repository ini:
 ```bash
 git clone [https://github.com/RahadatulQudsi/tugas1-fittrack.git](https://github.com/RahadatulQudsi/tugas1-fittrack.git)
 cd tugas1-fittrack
@@ -55,19 +59,36 @@ javac src/*.java
 
 Jalankan program:
 java -cp src TesFitTrack
+```
 
-CONTOH OUTPUT :
-=== 1. SKENARIO PEMBUATAN OBJEK & VALIDASI CONSTRUCTOR ===
-[Uji Coba Input Salah] Error Validasi: Nomor telepon harus diawali angka 0 dan minimal 10 digit!
-Error Validasi: Jenis paket hanya boleh 'Basic', 'Premium', atau 'VIP'!
+###  Melalui IntelliJ IDEA / VS Code
 
-=== 2. SKENARIO PERUBAHAN DATA LEWAT SETTER (VALIDASI) ===
-Nomor Telepon Awal Budi: 085678901234
-Mencoba mengubah nomor telepon Budi dengan nilai tidak valid ('123')... Error Validasi: Nomor telepon harus diawali angka 0 dan minimal 10 digit!
-Nomor Telepon Budi Setelah Gagal Diubah: 085678901234
+1. Buka folder proyek `tugas1-fittrack` pada IDE pilihan Anda.
+2. Pastikan SDK proyek telah diatur ke **JDK 21**.
+3. Buka file `src/TesFitTrack.java`.
+4. Klik tombol **Run** (atau tekan `Shift + F10` di IntelliJ / ikon tombol Play di VS Code).
 
-=== 3. CETAK DAFTAR MEMBER DENGAN PERULANGAN FOR & TOSTRING() ===
-Member ke-1: Member FitTrack [Nama: 'Andi Wijaya', No. Telepon: '081234567890', Tanggal Daftar: '10-10-2026', Jenis Paket: 'Premium']
-Member ke-2: Member FitTrack [Nama: 'Budi Santoso', No. Telepon: '085678901234', Tanggal Daftar: '12-10-2026', Jenis Paket: 'VIP']
-Member ke-3: Member FitTrack [Nama: 'Citra Dewi', No. Telepon: '089012345678', Tanggal Daftar: '14-10-2026', Jenis Paket: 'Basic']
-Member ke-4: Member FitTrack [Nama: 'Eko Prasetyo', No. Telepon: 'null', Tanggal Daftar: '15-10-2026', Jenis Paket: 'null']
+---
+
+## Contoh Output
+
+![Screenshot Hasil Eksekusi Program](Output.png)
+
+
+## Nilai Default
+
+| Atribut | Nilai Default | Keterangan |
+| :--- | :--- | :--- |
+| **Jenis Paket** | `"Basic"` | Jika instansiasi dilakukan tanpa menyertakan argumen jenis paket, sistem secara otomatis menetapkan paket sebagai **Basic**. |
+| **Data Gagal Validasi** | `null` / Nilai Lama | Jika data pada *constructor* tidak lolos validasi, atribut bernilai `null`. Jika gagal pada *setter*, atribut mempertahankan **nilai lama**. |
+
+## Batasan dan Pengembangan Lanjutan
+### Batasan Saat Ini
+* Data anggota masih disimpan di dalam memori utama (array/RAM) sehingga data hilang saat program dihentikan.
+* Belum tersedia antarmuka pengguna interaktif (CLI Scanner / GUI) untuk memasukkan data secara dinamis dari keyboard.
+
+### Rencana Pengembangan Lanjutan
+* Mengintegrasikan media penyimpanan permanen (database MySQL atau file JSON/CSV).
+* Menambahkan fitur penghitungan biaya keanggotaan berdasarkan jenis paket (Basic, Premium, VIP).
+* Menambahkan antarmuka interaktif CLI berbasis menu pilihan bagi pengguna.
+
